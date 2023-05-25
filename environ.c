@@ -1,4 +1,5 @@
 #include "shell.h"
+#include <stdlib.h>
 
 /**
  * _myenv - prints current env
@@ -82,11 +83,11 @@ int _myunsetenv(info_t *info)
  */
 int populate_env_list(info_t *info)
 {
-	list_t *node = NULL;
-	size_t i;
+        list_t *node = NULL;
+        size_t i;
 
-	for (i = 0; environ[i]; i++)
-		add_node_end(&node, environ[i], 0);
-	info->env = node;
-	return (0);
+        for (i = 0; get_environ(info)[i]; i++)
+                add_node_end(&node, get_environ(info)[i], 0);
+        info->env = node;
+        return 0;
 }
