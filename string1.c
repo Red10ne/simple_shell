@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * _strcpy - duplicate a string.
- * @dest: the destination.
- * @src: the source.
+ * _strcpy - copy string
+ * @dest: destination
+ * @src: source
  *
- * Return: pointer to destination
+ * Return: pointer to the destination
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -23,10 +23,10 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strdup - reproduces a string.
- * @str: the duplicate string.
+ * _strdup - duplicates a string
+ * @str: String to be duplicated
  *
- * Return: pointer to the duplicated string.
+ * Return: pointer to the duplicated string
  */
 char *_strdup(const char *str)
 {
@@ -46,8 +46,8 @@ char *_strdup(const char *str)
 }
 
 /**
- *_puts - prints a string of input.
- *@str: the string to be printed.
+ * _puts - print an input string
+ * @str: String to be printed
  *
  * Return: Nothing
  */
@@ -65,8 +65,8 @@ void _puts(char *str)
 }
 
 /**
- * _putchar - stdout is updated with the character C.
- * @c: The character printed.
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
