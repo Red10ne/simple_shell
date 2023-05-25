@@ -1,17 +1,17 @@
 #include "shell.h"
 
 /**
- * _myexit - exits the shell
- * @info: a Structure containing any potential arguments used to maintain
- *          constant function prototype.
- *  Return: exits with a given exit status
- *         (0) if info.argv[0] != "exit"
+ * _myexit - exit the shell
+ * @info: the structure containing potential arguments Used to maintain
+ * constant function prototype.
+ * Return: exit with given exit status
+ * (0) if info.argv[0] != "exit"
  */
 int _myexit(info_t *info)
 {
 	int exitcheck;
 
-	if (info->argv[1])  /* If there is any exit arguement */
+	if (info->argv[1]) /* If there is an exit arguement */
 	{
 		exitcheck = _erratoi(info->argv[1]);
 		if (exitcheck == -1)
@@ -30,10 +30,10 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd - changes the current directory of the process
- * @info: a Structure containing any potential arguments used to maintain
+ * _mycd - change current directory of process
+ * @info: the structure containing potential arguments Used to maintain
  * constant function prototype.
- *  Return: Always 0
+ * Return: Always 0
  */
 int _mycd(info_t *info)
 {
@@ -47,7 +47,7 @@ int _mycd(info_t *info)
 	{
 		dir = _getenv(info, "HOME=");
 		if (!dir)
-			chdir_ret = /* TODO: what should this need to be? */
+			chdir_ret = /* TODO: what should this be? */
 				chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
 		else
 			chdir_ret = chdir(dir);
@@ -61,7 +61,7 @@ int _mycd(info_t *info)
 			return (1);
 		}
 		_puts(_getenv(info, "OLDPWD=")), _putchar('\n');
-		chdir_ret = /* TODO: what should this need to be? */
+		chdir_ret = /* TODO: what should this be? */
 			chdir((dir = _getenv(info, "OLDPWD=")) ? dir : "/");
 	}
 	else
@@ -78,11 +78,12 @@ int _mycd(info_t *info)
 	}
 	return (0);
 }
+
 /**
- * _myhelp - changes current directory of the process
- * @info: structure containing any potential arguments used to maintain
- * constant function to prototype
- *  Return: Always 0
+ * _myhelp - change the current directory of the process
+ * @info: the structure containing potential arguments Used to maintain
+ * constant function prototype.
+ * Return: Always 0
  */
 int _myhelp(info_t *info)
 {

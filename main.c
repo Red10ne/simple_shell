@@ -1,8 +1,13 @@
 #include "shell.h"
 
 /**
+<<<<<<< HEAD
  * main - entry point
  * @ac: arg count
+=======
+ * main - entry points
+ * @ac: arg counts
+>>>>>>> 448616a8406c3199bb373d368df2ba36ce43dbcf
  * @av: arg vector
  *
  * Return: 0 on success, 1 on error

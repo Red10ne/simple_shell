@@ -38,10 +38,17 @@ extern char **environ;
 
 
 /**
+<<<<<<< HEAD
  * struct liststr - singly linked list
  * @num: the number field
  * @str: a string
  * @next: points to the next node
+=======
+ * struct liststr - Singly linked list
+ * @num: Number field
+ * @str: String
+ * @next: points to Next node
+>>>>>>> 448616a8406c3199bb373d368df2ba36ce43dbcf
  */
 typedef struct liststr
 {
@@ -51,11 +58,19 @@ typedef struct liststr
 } list_t;
 
 /**
+<<<<<<< HEAD
  * struct passinfo - contains pseudo-arguements to pass into a function,
  * allowing uniform prototype for function pointer struct
  * @arg: a string generated from getline containing arguements
  * @argv:an array of strings generated from arg
  * @path: a string path for the current command
+=======
+ * struct passinfo - contains pseudo-arguements to pass into function,
+ * allowing uniform prototype for function pointer struct
+ * @arg: String generated from getline containing arguements
+ * @argv:Array of strings generated from arg
+ * @path:String path for the current command
+>>>>>>> 448616a8406c3199bb373d368df2ba36ce43dbcf
  * @argc: the argument count
  * @line_count: the error count
  * @err_num: the error code for exit()s
@@ -65,12 +80,21 @@ typedef struct liststr
  * @environ: custom modified copy of environ from LL env
  * @history: the history node
  * @alias: the alias node
+<<<<<<< HEAD
  * @env_changed: on if environ was changed
  * @status: the return status of the last exec'd command
  * @cmd_buf: address of pointer to cmd_buf, on if chaining
  * @cmd_buf_type: CMD_type ||, &&, ;
  * @readfd: the fd from which to read line input
  * @histcount: the history line number count
+=======
+ * @env_changed: on if environ was change
+ * @status: returns status of last exec'd command
+ * @cmd_buf: address of pointer to cmd_buf, on if chaining
+ * @cmd_buf_type: CMD_type ||, &&, ;
+ * @readfd: fd from which to read line input
+ * @histcount: History line number count
+>>>>>>> 448616a8406c3199bb373d368df2ba36ce43dbcf
  */
 typedef struct passinfo
 {
@@ -101,8 +125,13 @@ typedef struct passinfo
 
 /**
  * struct builtin - contains a builtin string and related function
+<<<<<<< HEAD
  * @type: the builtin command flag
  * @func: the function
+=======
+ * @type: Builtin command flag
+ * @func: the Function
+>>>>>>> 448616a8406c3199bb373d368df2ba36ce43dbcf
  */
 typedef struct builtin
 {
