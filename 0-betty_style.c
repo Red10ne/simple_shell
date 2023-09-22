@@ -8,5 +8,5 @@
 
 int main(void)
 {
-        printf("Hello ALX I'm RedOne");
+	printf("Hello ALX I'm RedOne");
 }
